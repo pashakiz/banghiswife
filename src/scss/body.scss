@@ -40,25 +40,24 @@ body {
 }
 .container {
   @media (min-width: 1500px) {
-    & {
-      max-width: $container-xxl + $grid-gutter-width;
-    }
+    max-width: $container-xxl + $grid-gutter-width;
   }
   @media (min-width: 1920px) {
-    & {
-      max-width: $container-xxxl + $grid-gutter-width;
+    max-width: $container-xxxl + $grid-gutter-width;
+  }
+  &.container_header {
+    @media (min-width: 1200px) {
+      max-width: 100%;
     }
   }
 }
 .content {
-  @media (min-width: 992px) {
-    padding: 30px 0 0;
-  }
+  padding: 55px 0 0;
   @media (min-width: 1200px) {
-    padding: 74px 48px 20px;
+    padding: 111px 100px 20px;
   }
   @media (min-width: 1920px) {
-    padding: 74px 148px 20px;
+    padding: 111px 148px 20px;
   }
 }
 .content {
@@ -91,17 +90,18 @@ h1 {
   }
 }
 h2 {
-  font-weight: 300;
-  font-size: 45px;
-  line-height: 55px;
-  color: #131313;
-  text-align: center;
-  margin-bottom: 45px;
-  @media (min-width: 768px) {
-    color: #222;
-    font-size: 60px;
-    line-height: 80px;
-    margin-bottom: 72px;
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 44px;
+  color: #272727;
+  margin-bottom: 32px;
+  @media (min-width: 992px) {
+    color: #191919;
+    font-size: 70px;
+    line-height: 93px;
+    margin-bottom: 95px;
+    margin-top: 70px;
   }
   &.h2_index {
     font-size: 30px;
@@ -209,7 +209,7 @@ a {
       width: 100%;
       height: $footer_height_mob;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       margin-bottom: $body_mb + $footer_height;
       .footer {
         height: $footer_height;
