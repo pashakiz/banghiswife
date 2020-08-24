@@ -96,6 +96,12 @@ textarea.form-control {
     margin-top: 2.5rem;
   }
 }
+.form-group_100up {
+  margin-top: 55px;
+  @media (min-width: 768px) {
+    margin-top: 100px;
+  }
+}
 .custom-checkbox {
   &.custom-control {
     padding-left: $checkbox_xs_padding_left;
@@ -263,62 +269,62 @@ textarea.form-control {
 
 .custom-switch {
   &.custom-control {
-    padding-left: calc(3rem + #{$switch_left_offset});
+    padding: 48px 15px 30px;
+    border-bottom: $switch_border;
+    margin-left: -15px;
+    margin-right: -15px;
     cursor: pointer;
-  }
-  .custom-control-label {
-    line-height: 1.5;
-    font-family: $font_family;
-    font-weight: 300;
-    font-size: 15px;
-    padding-top: 6px;
-    color: $switch_txt_color1;
-    cursor: pointer;
-    &::before {
-      line-height: 2;
-      content: $switch_content_bg;
-      color: $switch_txt_color2;
-      font-size: 13px;
-      font-weight: 500;
-      left: calc(-87px - #{$switch_distance_text});
-      width: 75px;
-      pointer-events: all;
-      border-radius: 10px;
-      background-color: #fff;
-      height: 28px;
-      top: 2px;
-      border: 1px solid #ccc;
-      padding: 0 10px;
-      transition: color .15s ease-in-out;
-    }
-    &::after {
-      line-height: 1.8;
-      content: 'Off';
-      font-size: 16px;
-      font-weight: 500;
-      color: $switch_txt_color3;
-      text-align: center;
-      top: calc(.25rem - 2px);
-      left: calc(-87px - 15px);
-      width: calc(3.0625rem - 11px);
-      height: 28px;
-      background-color: #ccc;
-      border-radius: 10px;
-      transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out, width .15s ease-in-out, left .15s ease-in-out;
+    position: relative;
+    &.custom-control_noborder {
+      border-bottom: none;
     }
     @media (min-width: 768px) {
-      font-size: 17px;
-      padding-top: 5px;
+      padding: 0 190px 0 0;
+      margin-left: 0;
+      margin-right: 0;
+      border-bottom: none;
       &::before {
-        line-height: 1.8;
-        font-size: 16px;
-        width: 88px;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 30px;
+        background-color: $switch_dot_color;
+        position: absolute;
+        right: 110px;
+        top: 4px;
+      }
+    }
+  }
+  .custom-control-label {
+    &::before {
+      left: 0;
+      top: -52px;
+      width: 55px;
+      height: 27px;
+      border: $switch_border;
+      border-radius: 100px;
+      background-color: transparent;
+    }
+    &::after {
+      top: calc(-52px + 4px);
+      left: 5px;
+      width: $switch_dot_size_mob;
+      height: $switch_dot_size_mob;
+      border-radius: 100%;
+      background-color: $switch_dot_color;
+    }
+    @media (min-width: 768px) {
+      &::before {
+        top: 0.25rem;
+        left: calc(100% + 120px);
+        width: 68px;
         height: 30px;
       }
       &::after {
-        left: calc(-87px - 15px);
-        width: calc(3.0625rem - 5px);
-        height: 30px;
+        top: calc(0.25rem + 4px);
+        left: calc(100% + 120px + 5px);
+        width: $switch_dot_size;
+        height: $switch_dot_size;
       }
     }
   }
@@ -326,46 +332,14 @@ textarea.form-control {
     &:checked {
       ~.custom-control-label {
         &::before {
-          content: $switch_content_bg;
-          color: $switch_txt_color1;
-          background-color: #fff;
-          border: 1px solid #131313;
-          padding: 0 10px;
+          border-color: $switch_dot_color_active;
+          background-color: transparent;
         }
         &::after {
-          content: 'On';
-          background-color: #FF6699;
-          left: calc(-87px - 23px);
-          transform: translateX(2.9rem);
+          background-color: $switch_dot_color_active;
+          transform: translateX(26px);
           @media (min-width: 768px) {
-            left: calc(-87px - 15px);
-          }
-        }
-        &:active {
-          &::before {
-            color: $switch_txt_color1;
-          }
-          &::after {
-            width: calc(3.0625rem);
-            left: calc(-87px - 23px - 11px);
-            @media (min-width: 768px) {
-              width: calc(3.0625rem + 5px);
-              left: calc(-87px - 15px - 11px);
-            }
-          }
-        }
-      }
-    }
-    &:active {
-      ~.custom-control-label {
-        &::before {
-          background-color: #fff;
-          color: $switch_txt_color2;
-        }
-        &::after {
-          width: calc(3.0625rem - 5px);
-          @media (min-width: 768px) {
-            width: calc(3.0625rem + 5px);
+            transform: translateX(36px);
           }
         }
       }
@@ -376,89 +350,25 @@ textarea.form-control {
           box-shadow: none;
         }
       }
-      &:not(:checked) {
-        ~.custom-control-label {
-          &::before {
-            border-color: #ccc;
-          }
+    }
+    &:focus:not(:checked) {
+      ~.custom-control-label {
+        &::before {
+          border-color: $switch_dot_color;
+        }
+      }
+    }
+    &:not(:disabled):active {
+      ~ .custom-control-label {
+        &::before {
+          background-color: rgba(242, 207, 207, 0.3);
+          border-color: $switch_dot_color;
         }
       }
     }
   }
 }
 
-.custom-switch {
-  &.custom-switch__sub {
-    &::after {
-      content: '';
-      display: block;
-      width: 200%;
-      height: 1px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 32px;
-      position: relative;
-      left: -50%;
-      @media (min-width: 768px) {
-        display: none;
-        padding-bottom: 0;
-        border: none;
-      }
-    }
-    &.custom-control {
-      padding-left: 0;
-      padding-top: 36px;
-      @media (min-width: 768px) {
-        padding-left: calc(3rem + #{$switch_left_offset_sub});
-        padding-top: 0;
-      }
-    }
-    .custom-control-label {
-      &::before {
-        left: 0;
-        top: -36px;
-        @media (min-width: 768px) {
-          left: calc(-87px - #{$switch_distance_text_sub});
-          top: 2px;
-        }
-      }
-      &::after {
-        left: 0;
-        top: -36px;
-        @media (min-width: 768px) {
-          left: calc(-87px - #{$switch_distance_text_sub});
-          top: calc(.25rem - 2px);
-        }
-      }
-      @media (min-width: 768px) {
-        line-height: 1.5;
-        font-size: 22px;
-        padding-top: 0;
-      }
-    }
-    .custom-control-input {
-      &:checked {
-        ~ .custom-control-label {
-          &::before {}
-          &::after {
-            left: -8px;
-            @media (min-width: 768px) {
-              left: calc(-87px - #{$switch_distance_text_sub});
-            }
-          }
-          &:active {
-            &::before {}
-            &::after {
-              left: -19px;
-              @media (min-width: 768px) {
-                left: calc(-87px - #{$switch_distance_text_sub} - 12px);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 .custom-file {
   display: block;
@@ -486,14 +396,13 @@ textarea.form-control {
 .btn {
   width: 100%;
   text-transform: uppercase;
-  border-radius: 10px;
-  padding: 1.0625rem 1.3rem;
-  font-weight: 300;
-  font-size: 14px;
-  color: #fff;
+  font-family: $font_family2;
+  border-radius: 0;
+  padding: 1.25rem 1.3rem;
+  font-size: 13px;
+  color: #191919;
   background-color: $btn_bg_color;
   &:hover {
-    color: #fff;
     background-color: $btn_hover_bg_color;
   }
   &:focus {
@@ -502,13 +411,12 @@ textarea.form-control {
   }
   @media (min-width: 768px) {
     width: auto;
-    font-size: 17px;
-    padding: 1.25rem 2.5rem;
+    font-size: 21px;
+    padding: 2rem 2.5rem;
   }
   &.btn_2 {
     font-size: 13px;
     padding: 0.9375rem 1.3rem;
-    border-radius: 17px;
     position: relative;
     @media (min-width: 768px) {
       font-size: 16px;
@@ -527,7 +435,6 @@ textarea.form-control {
     padding: 0.4375rem 1.3rem;
     background-color: #131313;
     font-weight: 300;
-    color: #fff;
     &:hover {
       background-color: $btn_bg_color;
     }

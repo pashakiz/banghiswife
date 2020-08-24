@@ -87,16 +87,12 @@ $footer_text_color_hover:   #C7ABAB;
 /**/$radio_bg_icon:              "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='4' fill='%23FF6699'/%3E%3C/svg%3E";
 
 //Custom Switch
-/**/$switch_content_0: 'Off';
-/**/$switch_content_1: 'On';
-/**/$switch_content_bg: $switch_content_0 + '\00a0\00a0\00a0\00a0\00a0' + $switch_content_1;
-/**/$switch_txt_color1: #060606;
-/**/$switch_txt_color2: #ccc;
-/**/$switch_txt_color3: #fff;
-/**/$switch_distance_text: 15px;
-/**/$switch_left_offset: 54px;
-/**/$switch_left_offset_sub: 100px;
-/**/$switch_distance_text_sub: 60px;
+$switch_dot_size: 22px;
+$switch_dot_size_mob: 19px;
+$switch_dot_color: #D4D4D4;
+$switch_dot_color_active: #F2CFCF;
+$switch_border: $switch_dot_color solid 1px;
+$switch_border_active: $switch_dot_color_active solid 1px;
 
 //Bootstrap container width
 @function get-container-width($key: 'md') {
