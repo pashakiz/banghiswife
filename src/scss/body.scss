@@ -62,17 +62,14 @@ body {
 }
 .content {
   &.content_settings {
+    @media (min-width: 768px) {
+      padding: 111px 0 0;
+    }
     @media (min-width: 992px) {
-      padding: 0 60px 0;
+      padding: 111px 0 0;
     }
     @media (min-width: 1200px) {
-      padding: 0 150px 20px;
-    }
-    @media (min-width: 1500px) {
-      padding: 0 225px 20px;
-    }
-    @media (min-width: 1920px) {
-      padding: 0 280px 20px;
+      padding: 111px 0 20px;
     }
   }
 }
@@ -159,16 +156,31 @@ a {
     font-size: 18px;
   }
 }
+.link2 {
+  font-family: $font_family2;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: $link2_color;
+  &:hover {
+    color: $link2_hover_color;
+  }
+  @media (min-width: 1920px) {
+    font-size: 20px;
+  }
+}
 .link3 {
   font-family: $link_txt_family;
-  font-weight: 300;
   font-size: 15px;
   color: $link3_color;
   &:hover {
     color: $link3_hover_color;
   }
   @media (min-width: 768px) {
-    font-size: 17px;
+    font-size: 20px;
+    color: $link_color;
+    &:hover {
+      color: $link_hover_color;
+    }
   }
 }
 .preloader {

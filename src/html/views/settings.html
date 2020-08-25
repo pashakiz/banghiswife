@@ -3,7 +3,7 @@
     <div class="container">
         <div class="content content_settings">
             <form action="">
-                <h2>Settings</h2>
+                <h2 class="d-md-none">Settings</h2>
                 <div class="row">
                     <div class="col-12 col-lg-6 pr-lg-0">
                         <div class="settings-photo">
@@ -21,49 +21,56 @@
                     </div>
                     <div class="col-12 col-lg-6 pl-lg-0">
                         <div class="settings-form">
-                            <div class="form-group form-group_20">
-                                <input class="form-control" type="text" placeholder="Full Name">
-                            </div>
                             <div class="form-group form-group_30">
-                                <input class="form-control" type="text" placeholder="Age">
-                            </div>
-                            <div class="form-group form-group_30">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline1">Male</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioInline2">Female</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <input class="form-control" type="text" placeholder="Full Name">
+                                    </div>
+                                    <div class="col-md-3 mt-4 mt-md-0">
+                                        <input class="form-control" type="text" placeholder="Age">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group form-group_40">
+                            <div class="form-group form-group_30 d-lg-none">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1m" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1m">Male</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2m" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2m">Female</label>
+                                </div>
+                            </div>
+                            <div class="form-group form-group_60">
                                 <textarea class="form-control" placeholder="About"></textarea>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-lg-6 pr-lg-0">
-                        <div class="settings-photo settings-switch">
-                            <div class="form-group form-group_40">
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch">
-                                    <label class="custom-control-label" for="customSwitch">Notify me of site updates</label>
+                            <div class="form-group form-group_60 d-lg-flex justify-content-between">
+                                <div class="d-none d-lg-block">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline1">Male</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline2">Female</label>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="custom-control custom-checkbox custom-control-inline mr-0">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Notify me of site updates</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 pl-lg-0">
-                        <div class="settings-form">
-                            <div class="form-group form-group_20">
+                            <div class="form-group form-group_60">
                                 <button class="btn btn_w100">SAVE PREFERENCES</button>
                             </div>
                             <div class="form-group text-center">
-                                <a href="#" class="link1">Sign Out</a>
+                                <a href="#" class="link2">Sign Out</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </form>
         </div>

@@ -27,10 +27,10 @@ body textarea:required:valid {
   border: $input_border;
   background-color: $input_bg;
   border-radius: $input_border_radius;
-  padding: 0.9375rem 1.875rem;
+  padding: 1.125rem 25px;
   color: $input_txt_color;
   font-family: $input_txt_family;
-  font-size: $checkbox_txt_xs_size;
+  font-size: 15px;
   line-height: $checkbox_txt_xs_lh;
   font-weight: 300;
   &:hover {
@@ -48,9 +48,9 @@ body textarea:required:valid {
     color: $input_placeholder_color;
     opacity: 1;
   }
-  @media (min-width: 768px) {
-    padding: 1.25rem 1.875rem;
-    font-size: $checkbox_txt_size;
+  @media (min-width: 1920px) {
+    padding: 39px 56px 34px;
+    font-size: 19px;
   }
   &.form-control_login {
     border: none;
@@ -60,16 +60,16 @@ body textarea:required:valid {
   }
 }
 input.form-control {
-  height: 47px;
-  @media (min-width: 768px) {
-    height: 60px;
+  height: 54px;
+  @media (min-width: 1920px) {
+    height: 95px;
   }
 }
 textarea.form-control {
   border-radius: $textarea_border_radius;
-  min-height: 177px;
-  @media (min-width: 768px) {
-    min-height: 153px;
+  min-height: 143px;
+  @media (min-width: 1920px) {
+    min-height: 304px;
   }
 }
 .form-group_20 {
@@ -79,15 +79,21 @@ textarea.form-control {
   }
 }
 .form-group_30 {
-  margin-bottom: 1.25rem;
-  @media (min-width: 768px) {
-    margin-bottom: 1.875rem;
+  margin-bottom: 25px;
+  @media (min-width: 1920px) {
+    margin-bottom: 35px;
   }
 }
 .form-group_40 {
   margin-bottom: 1.875rem;
   @media (min-width: 768px) {
     margin-bottom: 2.5rem;
+  }
+}
+.form-group_60 {
+  margin-bottom: 35px;
+  @media (min-width: 1920px) {
+    margin-bottom: 60px;
   }
 }
 .form-group_40up {
@@ -105,11 +111,13 @@ textarea.form-control {
 .custom-checkbox {
   &.custom-control {
     padding-left: $checkbox_xs_padding_left;
-    @media (min-width: 768px) {
+    @media (min-width: 1920px) {
       padding-left: $checkbox_padding_left;
     }
   }
   .custom-control-label {
+    color: #191919;
+    letter-spacing: 1px;
     font-family: $checkbox_txt_family;
     font-weight: 300;
     line-height: 20px;
@@ -133,11 +141,15 @@ textarea.form-control {
       outline: none !important;
       background: no-repeat 50% / 50% 50%;
     }
-    @media (min-width: 768px) {
-      & {
-        font-size: $checkbox_txt_size;
-        line-height: $checkbox_txt_lh;
-      }
+    @media (min-width: 992px) {
+      letter-spacing: 0;
+    }
+    @media (min-width: 1200px) {
+      letter-spacing: 1px;
+    }
+    @media (min-width: 1920px) {
+      font-size: $checkbox_txt_size;
+      line-height: $checkbox_txt_lh;
       &::before {
         top: $checkbox_top;
         left: $checkbox_left;
@@ -164,10 +176,19 @@ textarea.form-control {
         }
       }
     }
+    &:hover {
+      ~.custom-control-label {
+        &::before {
+          border-color: $checkbox_checked_border_color !important;
+        }
+      }
+    }
     &:active {
       ~.custom-control-label {
         &::before {
           background-color: $checkbox_active_bg_color;
+          opacity: 0.5;
+          border-color: $checkbox_checked_border_color !important;
         }
       }
     }
@@ -184,11 +205,19 @@ textarea.form-control {
 .custom-radio {
   &.custom-control {
     padding-left: $radio_xs_padding_left;
-    @media (min-width: 768px) {
+    @media (min-width: 1920px) {
       padding-left: $radio_padding_left;
+    }
+    &.custom-control-inline {
+      margin-right: 25px;
+      @media (min-width: 1920px) {
+        margin-right: 32px;
+      }
     }
   }
   .custom-control-label {
+    color: #191919;
+    letter-spacing: 1px;
     font-family: $radio_txt_family;
     font-weight: 300;
     font-size: $radio_txt_xs_size;
@@ -202,7 +231,7 @@ textarea.form-control {
       background-color: $radio_bg_color;
       border: $radio_border !important;
       outline: none !important;
-      border-radius: 7px;
+      border-radius: 100%;
     }
     &::after {
       top: $radio_xs_top;
@@ -210,13 +239,18 @@ textarea.form-control {
       width: $radio_xs_width;
       height: $radio_xs_height;
       outline: none !important;
+      border-radius: 100%;
       background: no-repeat 50% / 50% 50%;
     }
-    @media (min-width: 768px) {
-      & {
-        font-size: $radio_txt_size;
-        line-height: $radio_txt_lh;
-      }
+    @media (min-width: 992px) {
+      letter-spacing: 0;
+    }
+    @media (min-width: 1200px) {
+      letter-spacing: 1px;
+    }
+    @media (min-width: 1920px) {
+      font-size: $radio_txt_size;
+      line-height: $radio_txt_lh;
       &::before {
         top: $radio_top;
         left: $radio_left;
@@ -235,7 +269,8 @@ textarea.form-control {
     &:checked {
       ~.custom-control-label {
         &::after {
-          background-image: url($radio_bg_icon);
+          background-color: $radio_active_bg_color;
+          background-image: none;
         }
         &::before {
           border-color: $radio_checked_border_color;
@@ -254,6 +289,7 @@ textarea.form-control {
       ~.custom-control-label {
         &::before {
           background-color: $radio_active_bg_color;
+          opacity: 0.5;
         }
       }
     }
@@ -369,12 +405,14 @@ textarea.form-control {
   }
 }
 
-
 .custom-file {
   display: block;
-  width: 170px;
+  width: 145px;
   height: auto;
   margin: 0 auto;
+  @media (min-width: 1920px) {
+    width: 256px;
+  }
   .custom-file-input {
     width: 100%;
     height: 100%;
@@ -401,6 +439,7 @@ textarea.form-control {
   padding: 1.25rem 1.3rem;
   font-size: 13px;
   color: #191919;
+  letter-spacing: 2px;
   background-color: $btn_bg_color;
   &:hover {
     background-color: $btn_hover_bg_color;
@@ -409,7 +448,7 @@ textarea.form-control {
     outline: none;
     box-shadow: none;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1920px) {
     width: auto;
     font-size: 21px;
     padding: 2rem 2.5rem;
@@ -431,15 +470,15 @@ textarea.form-control {
     }
   }
   &.btn_4 {
-    font-size: 14px;
-    padding: 0.4375rem 1.3rem;
-    background-color: #131313;
-    font-weight: 300;
+    font-size: 10px;
+    padding: 1.125rem 1.3rem;
+    background-color: #EEEEEE;
     &:hover {
       background-color: $btn_bg_color;
     }
-    @media (min-width: 768px) {
-      padding: 0.625rem 1.3rem;
+    @media (min-width: 1920px) {
+      font-size: 18px;
+      padding: 1.75rem 1.3rem;
     }
   }
   &.btn_index {

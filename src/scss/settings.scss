@@ -1,6 +1,6 @@
 .settings-form {
-  @media (min-width: 992px) {
-    max-width: 406px;
+  @media (min-width: 1920px) {
+    max-width: 690px;
   }
 }
 .settings-photo {
@@ -8,14 +8,9 @@
   @media (min-width: 321px) {
     max-width: 290px;
   }
-  @media (min-width: 330px) {
-    max-width: 300px;
-  }
-}
-.settings-switch {
-  max-width: 100%;
-  @media (min-width: 992px) {
-    max-width: 301px;
+  @media (min-width: 1920px) {
+    max-width: 520px;
+    margin-right: 110px;
   }
 }
 .profile-photo {
@@ -23,18 +18,17 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  height: 390px;
-  max-height: 390px;
-  border-radius: 20px;
+  height: 430px;
+  max-height: 430px;
   overflow: hidden;
-  background-color: #D5D5D5;
+  background-color: #EEEEEE;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  @media (min-width: 576px) {
-    height: 390px;
-    max-height: 390px;
-    max-width: 300px;
+  @media (min-width: 1920px) {
+    height: 790px;
+    max-height: 790px;
+    max-width: 520px;
   }
 }
 
