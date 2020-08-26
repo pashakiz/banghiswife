@@ -65,8 +65,7 @@ $(function() {
         $('.owl-carousel.user-profile-slider').owlCarousel({
             loop: true,
             dots: true,
-            items: 1,
-            autoWidth: true
+            items: 1
         });
 
         //slider (Profile gallery) for desktop
