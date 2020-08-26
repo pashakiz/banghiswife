@@ -69,6 +69,20 @@ $(function() {
             autoWidth: true
         });
 
+        //slider (Profile gallery) for desktop
+        $('.owl-carousel.user-profile-gallery').owlCarousel({
+            loop: true,
+            dots: false,
+            items: 4,
+            margin: 10,
+            autoWidth: true,
+            responsive:{
+                1920:{
+                    margin: 16
+                }
+            }
+        });
+
         //gallery on desktop
         $('.user-profile-gallery').on('click', '.user-profile-gallery__item', function(){
             let url = $(this).css('background-image');
