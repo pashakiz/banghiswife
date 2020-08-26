@@ -64,9 +64,8 @@ $(function() {
         //slider (Profile gallery) for mobile
         $('.owl-carousel.user-profile-slider').owlCarousel({
             loop: true,
-            dots: false,
+            dots: true,
             items: 1,
-            margin: 6,
             autoWidth: true
         });
 
