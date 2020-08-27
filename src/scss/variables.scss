@@ -1,5 +1,5 @@
-/**/$container-xxl:             1260px;
-/**/$container-xxxl:            1374px;
+$container-xxl:             1260px;
+$container-xxxl:            1374px;
 $body_bg_color:             #ffffff;
 $logo_main_color:           #F2CFCF;
 $btn_bg_color:              #F2CFCF;
@@ -103,7 +103,7 @@ $switch_border_active: $switch_dot_color_active solid 1px;
 }
 
 //User List page wider
-/**/$user_list_wider:           150px;
-/**/$user_list_mini_wider:      50px;
-/**/$user_list_item_breakpoint: 992px;
-/**/$user_list_title_color:     #222222;
+$user_list_wider:           130px;
+$user_list_mini_wider:      50px;
+$user_list_item_breakpoint: 992px;
+$user_list_title_color:     #191919;

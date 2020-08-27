@@ -294,20 +294,32 @@
     }
   }
   &.compatibility_list {
-    padding: 0 11px 14px;
+    padding: 0 12px 14px;
     @media (min-width: $user_list_item_breakpoint) {
-      padding: 0 31px 50px;
+      padding: 0 40px 47px;
     }
     .compatibility__title {
+      font-family: $font_family;
+      color: #5F5F5F;
+      font-weight: 400;
       margin-top: 5px;
-      font-size: 7px;
-      font-weight: 300;
+      font-size: 8px;
       @media (min-width: $user_list_item_breakpoint) {
-        margin-top: 13px;
-        font-size: 15px;
+        font-family: $font_family;
+        color: #8F8F8F;
+        margin-top: 14px;
+        font-size: 18px;
       }
     }
-    .compatibility__progress {}
+    .compatibility__progress {
+      width: 22px;
+      height: 22px;
+      margin: auto;
+      @media (min-width: 992px) {
+        width: 54px;
+        height: 54px;
+      }
+    }
     .compatibility__chart {
       +.compatibility__chart {
         margin-left: 10px;
