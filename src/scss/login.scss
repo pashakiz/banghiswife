@@ -1,17 +1,18 @@
 .login-slider {
   display: flex;
   position: relative;
-  margin-top: 38px;
-  margin-bottom: 51px;
   justify-content: space-between;
   padding-left: 15px;
+  margin-top: -145px;
   overflow: hidden;
   @media (min-width: 348px) {
     justify-content: space-around;
   }
+  @media (min-width: 576px) {
+    padding-left: 0;
+  }
   @media (min-width: 992px) {
-    margin-top: 141px;
-    margin-bottom: 114px;
+    margin-top: -228px;
   }
   &.owl-carousel {
     .owl-stage-outer {
@@ -20,15 +21,44 @@
   }
 }
 
-.header-form-title {
-  color: #fff;
-  font-weight: 300;
-  font-size: 50px;
-  line-height: 55px;
-  margin-bottom: 30px;
-  @media (min-width: 768px) {
-    font-size: 60px;
-    line-height: 70px;
-    margin-bottom: 37px;
+.title-slogan {
+  padding: 53px 0 192px;
+  @media (min-width: 992px) {
+    padding: 30px 0 391px;
   }
+  @media (min-width: 1200px) {
+    padding: 105px 0 391px;
+  }
+  @media (min-width: 1920px) {
+    padding: 167px 0 391px;
+  }
+  .title-slogan__xs {
+    text-align: center;
+  }
+  .title-slogan__lg {
+    text-align: right;
+    @media (min-width: 992px) {
+      width: 50%;
+      margin-left: 50%;
+    }
+    @media (min-width: 1920px) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.header-form-title {
+  color: $logo_main_color;
+  font-weight: 400;
+  font-family: $font_family2;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.header-form-title-svg {
+  text-align: center;
+  margin-bottom: 50px;
 }
