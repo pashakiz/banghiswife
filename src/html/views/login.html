@@ -1,53 +1,84 @@
 <%= _.template(require('./../includes/header-main.html'))() %>
-    <header class="header">
-        <div class="header-firstscreen-wrap bg04mob">
-            <div class="header-firstscreen">
-                <div class="header-block header-block_bg-red">
-                    <div class="header-block__bgtext login">
-                        <div class="header__form">
+<header class="header header_main bg04"> <!-- bg01-bg05-->
+    <div class="container container_header">
+        <div class="header__row">
+            <div class="d-flex justify-content-center justify-content-xl-start align-items-center">
+                <div class="logo logo_main flex-grow-1 flex-md-grow-0 mr-auto mr-md-0">
+                    <div class="logo__img"></div>
+                    <div class="logo__text">His Wife</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-bg1 content-bg1_firstscreen">
+        <div class="header-firstscreen-wrap">
+            <div class="container container_index">
+                <div class="header-firstscreen d-flex flex-column flex-lg-row justify-content-center">
+                    <div class="header-firstscreen-img flex-grow-1 d-none d-lg-block">
+                        <div class="header-firstscreen-photo"></div>
+                    </div>
+                    <div class="header-firstscreen-inf flex-grow-0">
+                        <div class="header-firstscreen-content login">
                             <form action="">
-                                <h2 class="header-form-title text-center text-md-left">Enter your profile</h2>
-                                <div class="form-group">
+                                <h2 class="header-form-title d-lg-none">Enter your <br>profile</h2>
+                                <div class="header-form-title-svg d-none d-lg-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="607" height="67" viewBox="0 0 607 67" class="img-fluid">
+                                        <text transform="translate(1 55)" fill="none" stroke="#f2cfcf" stroke-width="1" font-size="54" font-family="Baigo-Regular, Baigo" letter-spacing="0.05em">
+                                            <tspan x="0" y="0">ENTER YOUR PROFILE</tspan>
+                                        </text>
+                                    </svg>
+                                </div>
+                                <div class="form-group form-group_login">
                                     <input class="form-control form-control_login" type="text" placeholder="Email">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group form-group_login">
                                     <input class="form-control form-control_login" type="password" placeholder="Password">
                                 </div>
-                                <div class="form-group form-group_20">
-                                    <button class="btn btn_w100 d-lg-none">Sign Up</button>
-                                    <button class="btn btn_w100 d-none d-lg-block">Sign Up</button>
+                                <div class="form-group form-group_btn-login">
+                                    <button class="btn btn_3 btn_w100">Log in</button>
                                 </div>
-                                <div class="form-group text-center">
-                                    <a class="link3" href="signup.html">Or Sign up?</a>
+                                <div class="text-center">
+                                    <a class="link3" href="signup.html">Or Sign Up?</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="header-block header-block_bg-img bg01">
-                    <div class="header-block__overlay">
-                        <div class="d-flex justify-content-start justify-content-lg-center align-items-center w-100 h-100">
-                            <div class="d-flex justify-content-between justify-content-md-center align-items-center">
-                                <div class="logo flex-grow-1 flex-md-grow-0 mr-auto mr-md-0">
-                                    <div class="logo__img"></div>
-                                    <div class="logo__text">BANG His Wife</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="content-bg2">
+        <div class="container container_index">
+            <div class="title-slogan">
+                <div class="title-slogan__xs d-lg-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="190" height="71" viewBox="0 0 190 71" class="img-fluid">
+                        <text transform="translate(95 29)" fill="none" stroke="#191919" stroke-width="1" font-size="28" font-family="Baigo-Regular, Baigo" letter-spacing="0.16em">
+                            <tspan x="-93.352" y="0">MEET YOUR</tspan>
+                            <tspan x="-55.888" y="35">DREAM</tspan>
+                        </text>
+                    </svg>
+                </div>
+                <div class="title-slogan__lg d-none d-lg-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="661" height="216" viewBox="0 0 661 216" class="img-fluid">
+                        <text transform="translate(659 94)" fill="none" stroke="#191919" stroke-width="2" font-size="92" font-family="Baigo-Regular, Baigo" letter-spacing="0.219em">
+                            <tspan x="-656.88" y="0">MEET YOUR</tspan>
+                            <tspan x="-388.976" y="102">DREAM</tspan>
+                        </text>
+                    </svg>
                 </div>
             </div>
         </div>
-    </header>
-    <main class="main">
-        <h2>Meet your dream</h2>
+    </div>
+    <div class="container container_index container_slider">
         <div class="login-slider owl-carousel">
             <div class="user-list-item user-list-item_login">
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-01.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Elena, 35</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -55,20 +86,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -79,8 +137,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-02.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Jennifer, 24</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -88,20 +146,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between justify-content-sm-center justify-content-lg-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -112,8 +197,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-03.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Elena, 35</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -121,20 +206,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -145,8 +257,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-04.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Jennifer, 24</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -154,20 +266,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between justify-content-sm-center justify-content-lg-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -178,8 +317,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-01.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Elena, 35</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -187,20 +326,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -211,8 +377,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-02.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Jennifer, 24</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -220,20 +386,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between justify-content-sm-center justify-content-lg-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -244,8 +437,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-03.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Elena, 35</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -253,20 +446,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -277,8 +497,8 @@
                 <div class="user-list-item__pic">
                     <div class="user-list-item__img" style="background-image: url('img/photos/user-04.jpg');"></div>
                 </div>
+                <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                 <div class="user-list-item__inf">
-                    <a class="user-list-item__btn btn btn_2 btn_w100" href="#">Claim Her</a>
                     <div class="user-list-item__title">
                         <div class="user-list-item__name">Jennifer, 24</div>
                         <div class="user-list-item__loc">New York (1000 km)</div>
@@ -286,20 +506,47 @@
                     <div class="compatibility-title">Compatibility score: 15 000</div>
                     <div class="compatibility compatibility_login d-flex justify-content-between justify-content-sm-center justify-content-lg-between">
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Interests</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#3b3b3b"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Location</div>
                         </div>
                         <div class="compatibility__chart">
-                            <div class="compatibility__progress progress">
-                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="compatibility__progress">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="img-fluid w-100" width="90" height="90" viewBox="0 0 90 90">
+                                    <circle cx="9" cy="9" r="9" transform="translate(36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 10)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(72 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(62 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(36 72)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 62)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(0 36)" fill="#f2cfcf"/>
+                                    <circle cx="9" cy="9" r="9" transform="translate(10 10)" fill="#3b3b3b"/>
+                                </svg>
                             </div>
                             <div class="compatibility__title">Matches</div>
                         </div>
@@ -307,5 +554,6 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 <%= _.template(require('./../includes/footer.html'))() %>
