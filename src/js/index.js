@@ -40,23 +40,12 @@ $(function() {
         $('.owl-carousel.login-slider').owlCarousel({
             loop:true,
             autoWidth:true,
-            items: 3,
+            items: 2,
+            margin: 21,
             responsive:{
-                0:{
-                    margin:23,
-                    items:2
-                },
-                600:{
-                    margin:23,
-                    items:3
-                },
-                1400:{
-                    margin:91,
-                    items:3
-                },
-                1920:{
-                    margin:91,
-                    items:3
+                992:{
+                    margin:48,
+                    items:4
                 }
             }
         });

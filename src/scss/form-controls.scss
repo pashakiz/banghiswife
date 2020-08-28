@@ -54,8 +54,16 @@ body textarea:required:valid {
   }
   &.form-control_login {
     border: none;
+    background-color: rgba(242,207,207,0.41);
+    color: #DCCACA;
+    text-align: center;
     &:hover, &:focus {
-      background-color: #FFE8F0;
+      color: #fff;
+      background-color: rgba(242,207,207,0.6);
+    }
+    &::placeholder {
+      color: #fff;
+      opacity: 1;
     }
   }
 }
@@ -106,6 +114,24 @@ textarea.form-control {
   margin-top: 55px;
   @media (min-width: 768px) {
     margin-top: 100px;
+  }
+}
+.form-group_login {
+  margin-bottom: 15px;
+  @media (min-width: 992px) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 1920px) {
+    margin-bottom: 25px;
+  }
+}
+.form-group_btn-login {
+  margin-bottom: 38px;
+  @media (min-width: 992px) {
+    margin-bottom: 40px;
+  }
+  @media (min-width: 1920px) {
+    margin-bottom: 68px;
   }
 }
 .custom-checkbox {
@@ -448,6 +474,9 @@ textarea.form-control {
     outline: none;
     box-shadow: none;
   }
+  @media (min-width: 992px) {
+    font-size: 17px;
+  }
   @media (min-width: 1920px) {
     width: auto;
     font-size: 21px;
@@ -463,12 +492,7 @@ textarea.form-control {
     }
     &:hover {}
   }
-  &.btn_3 {
-    background-color: #060606;
-    &:hover {
-      background-color: $bg_dark_1;
-    }
-  }
+  &.btn_3 {}
   &.btn_4 {
     font-size: 10px;
     padding: 1.125rem 1.3rem;
@@ -483,9 +507,13 @@ textarea.form-control {
   }
   &.btn_index {
     padding: 1.0625rem 1.3rem;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       letter-spacing: 2px;
-      padding: 1.25rem 4rem;
+      font-size: 20px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 25px;
+      padding: 2rem 2.5rem;
     }
   }
 }

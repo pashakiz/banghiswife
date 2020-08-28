@@ -58,6 +58,19 @@ body {
       max-width: 1440px;
     }
   }
+  &.container_index {
+    @media (min-width: 1920px) {
+      max-width: 1535px;
+    }
+  }
+  &.container_slider {
+    padding-right: 0;
+    padding-left: 0;
+    @media (min-width: 576px) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
 }
 .content {
   padding: 55px 0 0;
@@ -211,7 +224,7 @@ a {
   &:hover {
     color: $link3_hover_color;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     font-size: 20px;
     color: $link_color;
     &:hover {

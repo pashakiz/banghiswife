@@ -331,16 +331,30 @@
   }
 
   &.compatibility_login {
-    padding: 0 14px 29px;
+    padding: 0 36px 20px;
     @media (min-width: $user_list_item_breakpoint) {
-      padding: 0 31px 50px;
+      padding: 0 40px 46px;
     }
     .compatibility__title {
+      font-family: $font_family;
+      font-weight: 400;
+      color: #5F5F5F;
       margin-top: 8px;
-      font-size: 13px;
+      font-size: 12px;
       @media (min-width: $user_list_item_breakpoint) {
+        font-family: $font_family;
+        color: #8F8F8F;
         margin-top: 13px;
-        font-size: 15px;
+        font-size: 18px;
+      }
+    }
+    .compatibility__progress {
+      width: 37px;
+      height: 37px;
+      margin: auto;
+      @media (min-width: 992px) {
+        width: 54px;
+        height: 54px;
       }
     }
     .compatibility__chart {
