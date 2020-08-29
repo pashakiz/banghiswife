@@ -514,10 +514,12 @@ textarea.form-control {
     }
   }
   &.btn_index {
+    width: 100%;
     padding: 1.0625rem 1.3rem;
     @media (min-width: 992px) {
+      padding: 1.25rem 1.3rem;
       letter-spacing: 2px;
-      font-size: 20px;
+      font-size: 15px;
     }
     @media (min-width: 1920px) {
       font-size: 25px;
